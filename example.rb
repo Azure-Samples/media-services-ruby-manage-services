@@ -99,11 +99,16 @@ def run_example
   # delete a media service
   #
   puts 'Delete a Media service'
+  puts 'Press any key to continue...'
+  gets
   media_services_client.media_service_operations.delete(RESOURCE_GROUP_NAME, MEDIA_SERVICE_NAME)
 
   #
   # delete resource group
   #
+  puts 'Media service has been deleted. Now delete resource group'
+  puts 'Press any key to continue...'
+  gets
   delete_resource_group(resource_client)
 end
 
